@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using FoodRecipes.Data;
 
 namespace FoodRecipes
 {
@@ -33,6 +35,9 @@ namespace FoodRecipes
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<FoodRecipesContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("FoodRecipesContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
