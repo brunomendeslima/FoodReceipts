@@ -37,7 +37,9 @@ namespace FoodRecipes
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<FoodRecipesContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("FoodRecipesContext")));
+                    options.UseMySql(Configuration.GetConnectionString("FoodRecipesContext"), builder =>
+                        builder.MigrationsAssembly("FoodRecipes")
+                    ));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
