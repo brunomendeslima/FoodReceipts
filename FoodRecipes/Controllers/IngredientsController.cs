@@ -54,7 +54,7 @@ namespace FoodRecipes.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,PriceUnit,Quantity,PriceInRecipe")] Ingredient ingredient)
+        public async Task<IActionResult> Create([Bind("Id,Name,BuyPrice,QuantityBuy,QuantityInRecipe,PriceInRecipe")] Ingredient ingredient)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace FoodRecipes.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,PriceUnit,Quantity,PriceInRecipe")] Ingredient ingredient)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,BuyPrice,QuantityBuy,QuantityInRecipe,PriceInRecipe")] Ingredient ingredient)
         {
             if (id != ingredient.Id)
             {

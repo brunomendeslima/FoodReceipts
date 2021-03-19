@@ -14,6 +14,10 @@ namespace FoodRecipes.Data
         {
         }
 
-        public DbSet<FoodRecipes.Models.Ingredient> Ingredient { get; set; }
+        public DbSet<Ingredient> Ingredient { get; set; }
+        public DbSet<Client> Client { get; set; }
+        public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }

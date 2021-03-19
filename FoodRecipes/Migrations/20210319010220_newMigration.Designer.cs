@@ -3,14 +3,16 @@ using System;
 using FoodRecipes.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FoodRecipes.Migrations
 {
     [DbContext(typeof(FoodRecipesContext))]
-    partial class FoodRecipesContextModelSnapshot : ModelSnapshot
+    [Migration("20210319010220_newMigration")]
+    partial class newMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
