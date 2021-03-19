@@ -9,8 +9,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using FoodRecipes.Data;
 
-namespace FoodReceipts
+namespace FoodRecipes
 {
     public class Startup
     {
@@ -33,6 +35,11 @@ namespace FoodReceipts
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<FoodRecipesContext>(options =>
+                    options.UseMySql(Configuration.GetConnectionString("FoodRecipesContext"), builder =>
+                        builder.MigrationsAssembly("FoodRecipes")
+                    ));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

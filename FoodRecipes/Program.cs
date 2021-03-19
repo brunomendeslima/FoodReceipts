@@ -8,7 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FoodReceipts
+namespace FoodRecipes
 {
     public class Program
     {

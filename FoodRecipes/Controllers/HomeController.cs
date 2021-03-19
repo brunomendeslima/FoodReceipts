@@ -1,4 +1,4 @@
-﻿using FoodReceipts.Models;
+﻿using FoodRecipes.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FoodReceipts.Controllers
+namespace FoodRecipes.Controllers
 {
     public class HomeController : Controller
     {
