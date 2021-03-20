@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,6 +11,7 @@ namespace FoodRecipes.Models
         public int Id { get; set; }
         public Client Client { get; set; }
         public ICollection<Product> Products { get; set; } = new List<Product>();
+        [DisplayName("Preço Total")]
         public double TotalPrice { get; set; }
 
         public Order() { }

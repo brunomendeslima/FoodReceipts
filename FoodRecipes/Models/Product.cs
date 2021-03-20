@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,6 +10,7 @@ namespace FoodRecipes.Models
     {
         public int ID { get; set; }
         public ICollection<Recipe> Recipes { get; set; } = new List<Recipe>();
+        [DisplayName("Preço de venda")]
         public decimal SellPrice { get; set; }
 
         public Product() { }
